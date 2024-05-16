@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Awesome Data Sets</title>
+    <!-- Bootstrap Styles-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FontAwesome Styles-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- Morris Chart Styles-->
+    <link href="assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+    <!-- Custom Styles-->
+    <link href="assets/css/custom-styles.css" rel="stylesheet" />
+    <!-- Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><b>Lab</b> Name</a>
+            </div>
+
+            
+        </nav>
+        <!--/. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                    <li>
+                        <a  href="index.html"><i class="fa fa-sitemap"></i> Homepage</a>
+                    </li>
+                    <li>
+                        <a href="database.html"><i class="fa fa-dashboard"></i> Database</a>
+                    </li>
+                    <li>
+                        <a href="proj2.html"><i class="fa fa-dashboard"></i> Database Description</a>
+                    </li>
+                    <li>
+                        <a href="https://www.kaggle.com/competitions"><i class="fa fa-desktop"></i> Competition</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-qrcode"></i> Submission</a>
+                    </li>
+                    <li>
+                        <a href="aboutus.html"><i class="fa fa-book"></i> About us</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-header">
+                            Dataset description
+                        </h1>
+                        <h2 class="page-header">
+                            <small>Each row represents a mind wandering event with values for corresponding features in columns. A mind wandering event is operationalized as an instance in which mind wandering was assessed. A mind wandering event can contain multiple probes e.g., participants asked to evaluate task-unrelated thought and boredom. Features can be classified into several categories: general, eye-tracker, task, eye measures, demographic Due to the varying designs of the studies, some features may not be applicable, measured, or reported. These missing values are represented by empty cells. Below is a description of the features contained in the dataset grouped into categories.</small>
+                        </h2>
+                        
+                    </div>
+                </div>
+                <!-- /. ROW  -->
+<!--                 <h3>Dataset description</h3>
+                <p>Each row represents a mind wandering event with values for corresponding features in columns. A mind wandering event is operationalized as an instance in which mind wandering was assessed. A mind wandering event can contain multiple probes e.g., participants asked to evaluate task-unrelated thought and boredom. Features can be classified into several categories: general, eye-tracker, task, eye measures, demographic Due to the varying designs of the studies, some features may not be applicable, measured, or reported. These missing values are represented by empty cells. Below is a description of the features contained in the dataset grouped into categories.</p>
+                <hr style="width:15%;height:1px;border:none;color:#333;background-color:#333;margin-left:0;"> -->
+
+                <button class="accordion">Study features</button>
+                <div class="panel">
+                    <ul>
+                        <li class="li_dropdown">StudyNum: study identifier</li>
+                        <li class="li_dropdown">ParticipantNum: participant identifier</li>
+                        <li class="li_dropdown">ExpSetting: location that participant performed the study
+                            <ul>
+                                <li class="li_dropdown">1 = lab</li>
+                                <li class="li_dropdown">2 = home</li>
+                                <li class="li_dropdown">3 = classroom</li>
+                                <li class="li_dropdown">4 = public setting</li>
+                            </ul>
+                        </li>
+                        
+                    </ul>
+                </div>
+
+                <button class="accordion">Eye-tracker features</button>
+                <div class="panel">
+                  <ul>
+                        <li class="li_dropdown">ScreenHeight: height of screen in pixels</li>
+                        <li class="li_dropdown">ScreenWidth: width of screen in pixels</li>
+                        <li class="li_dropdown">DeviceType: device used by participant
+                            <ul>
+                                <li class="li_dropdown">1 = computer</li>
+                                <li class="li_dropdown">2 = laptop</li>
+                                <li class="li_dropdown">3 = phone</li>
+                                <li class="li_dropdown">4 = virtual reality headset</li>
+                            </ul>
+                        </li>
+                        <li>IOS: operating system
+                            <ul>
+                                <li class="li_dropdown">1 = Windows</li>
+                                <li class="li_dropdown">2 = Mac</li>
+                                <li class="li_dropdown">3 = Linux</li>
+                                <li class="li_dropdown">4 = Other</li>
+                            </ul>
+                        </li>
+                        <li>IOS: operating system
+                            <ul>
+                                <li class="li_dropdown">1 = commercial (e.g., Tobii, Eyelink)</li>
+                                <li class="li_dropdown">2 = webcam-based</li>
+                            </ul>
+                        </li>
+                        <li class="li_dropdown">RefreshRate: screen refresh rate</li>
+                        <li class="li_dropdown">SamplingRate: eye tracker sampling rate</li>
+                        
+                    </ul>
+                </div>
+                <button class="accordion">Task features</button>
+                <div class="panel">
+                  <ul>
+                        <li class="li_dropdown">TaskType: category of task
+                            <ul>
+                                <li class="li_dropdown">1 = reading</li>
+                                <li class="li_dropdown">2 = listening</li>
+                                <li class="li_dropdown">3 = math problem</li>
+                                <li class="li_dropdown">4 = video</li>
+                                <li class="li_dropdown">5 = other</li>
+                            </ul>
+                        </li>
+                        <li class="li_dropdown">TaskPerformance: if mappable, performance on the task during which the probe occurred (e.g., question about a probed screen)
+                            <ul>
+                                <li class="li_dropdown">1 = correct</li>
+                                <li class="li_dropdown">2 = incorrect</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                  <button class="accordion">Mind wandering features</button>
+                <div class="panel">
+                  <ul>
+                        <li class="li_dropdown">ProbeNum: probe event identifier for a participant
+                        <li class="li_dropdown">TUTResponseType: type of response for task-unrelated thought
+                            <ul>
+                                <li class="li_dropdown">1 = Probe</li>
+                                <li class="li_dropdown">2 = Self-report</li>
+                                <li class="li_dropdown">3 = Questionnaire</li>
+                            </ul>
+                        </li class="li_dropdown">TUTProbeType: if TUT response was a probe, type of probe used
+                            <ul>
+                                <li class="li_dropdown">1 = yes/no</li>
+                             	<li class="li_dropdown">2 = scale</li>
+                            </ul>
+                         <li class="li_dropdown">TUTDirection: if a scale or questionnaire was used, what was the directionality? 
+                         	<ul>
+                         		<li class="li_dropdown">1 = increasing (higher = more)</li>
+                             	<li class="li_dropdown">2 = decreasing (higher = less)</li>
+                            </ul>
+                         <li class="li_dropdown">TUTScaleMin: minimum value of scale or questionnaire
+                         <li class="li_dropdown">TUTScaleMax: maximum value of scale or questionnaire
+                      	 <li class="li_dropdown">TUTAggregated: is the reported value an aggregate measure (e.g., # of TUT instances over a period of time)
+                         	<ul>
+                         		<li class="li_dropdown">1 = yes</li>
+                         		<li class="li_dropdown">0 = no</li>
+                         	</ul>
+                         <li class="li_dropdown"> TUTResponse: TUT measure response
+                         	<ul>
+                         		<li class="li_dropdown">if yes/no probe</li>
+                         		<li class="li_dropdown">1 = yes</li>
+                         		<li class="li_dropdown">0 = no</li>
+                         	</ul>
+                         <li class="li_dropdown">IntentionalityResponseType: type of response for intentionality
+                         	<ul>
+                         		<li class="li_dropdown">1 = Qrobe</li>
+                         		<li class="li_dropdown">2 = Self-report</li>
+                         		<li class="li_dropdown">3 = Questionnaire</li>
+                         	</ul>
+                         <li class="li_dropdown">IntentionalityProbeType: if intentionality response was a probe, type of probe used
+                         	<ul>
+                         		<li class="li_dropdown">1 = yes/no</li>
+                         		<li class="li_dropdown">2 = scale</li>
+                         	</ul>
+                         <li class="li_dropdown">IntentionalityDirection: if a scale or questionnaire was used, what was the directionality?
+                         	<ul>
+                         		<li class="li_dropdown">1 = increasing (higher = more)</li>
+                         		<li class="li_dropdown">2 = decreasing (higher = less)</li>
+                         	</ul>
+                         <li class="li_dropdown">IntentionalityScaleMin: minimum value of scale or questionnaire
+                         <li class="li_dropdown">IntentionalityScaleMax: maximum value of scale or questionnaire
+                         <li class="li_dropdown">IntentionalityAggregated: is the reported value an aggregate measure (e.g., # of intentional instances over a period of time)
+                         	<ul>
+                         		<li class="li_dropdown">1 = yes</li>
+                         		<li class="li_dropdown">2 = no</li>
+                         	</ul>
+                         <li class="li_dropdown">IntentionalityResponse: intentional measure response
+                         	<ul>
+                         		<li class="li_dropdown">If yes/no probe
+                         		<li class="li_dropdown">1 = yes</li>
+                         		<li class="li_dropdown">2 = no</li>
+                         	</ul>
+                         <li class="li_dropdown">AwarenessResponseType: type of response for awareness
+                         	<ul>
+                         		<li class="li_dropdown">1 = Probe</li>
+                         		<li class="li_dropdown">2 = Self-Report</li>
+                         		<li class="li_dropdown">3 = Questionnaire</li>
+                         	</ul>
+                         <li class="li_dropdown">AwarenessProbeType: if awareness response was a probe, type of probe used
+                         	<ul>
+                         		<li class="li_dropdown">1 = yes/no</li>
+                         		<li class="li_dropdown">2 = scale-Report</li>
+                         	</ul>
+                         <li class="li_dropdown">AwarenessDirection: if a scale or questionnaire was used, what was the directionality?
+                         	<ul>
+                         		<li class="li_dropdown">1 = increasing (higher = more)</li>
+                         		<li class="li_dropdown">2 = decreasing (higher = less)</li>
+                         	</ul>
+                         <li class="li_dropdown">AwarenessScaleMin: minimum value of scale or questionnaire
+						 <li class="li_dropdown">AwarenessScaleMax: maximum value of scale or questionnaire
+						 <li class="li_dropdown">AwarenessAggregated: is the reported value an aggregate measure (e.g., # of aware instances over a period of time)
+						 	<ul>
+                         		<li class="li_dropdown">1 = yes</li>
+                         		<li class="li_dropdown">0 = no</li>
+                         	</ul>
+                         <li class="li_dropdown">AwarenessResponse: awareness measure response
+                         	<ul>
+                         		<li class="li_dropdown">If yes/no probe
+                         		<li class="li_dropdown">1 = yes</li>
+                         		<li class="li_dropdown">2 = no</li>
+                         	</ul>
+                         <li class="li_dropdown">FMTResponseType: type of response for freely-moving thought
+                         	<ul>
+                         		<li class="li_dropdown">1 = Probe</li>
+                         		<li class="li_dropdown">2 = Self-Report</li>
+                         		<li class="li_dropdown">3 = Questionnaire</li>
+                         	</ul>
+                         <li class="li_dropdown">FMTProbeType: if FMT response was a probe, type of probe used
+                         	<ul>
+                         		<li class="li_dropdown">1 = yes/no</li>
+                         		<li class="li_dropdown">2 = scale</li>
+                         	</ul>
+                         <li class="li_dropdown">FMTDirection: if a scale or questionnaire was used, what was the directionality?
+                         	<ul>
+                         		<li class="li_dropdown">1 = increasing (higher = more)</li>
+                         		<li class="li_dropdown">2 = decreasing (higher = less)</li>
+                         	</ul>
+                         <li class="li_dropdown">FMTScaleMin: minimum value of scale or questionnaire
+						 <li class="li_dropdown">FMTScaleMax: maximum value of scale or questionnaire
+						 <li class="li_dropdown">FMTAggregated: is the reported value an aggregate measure (e.g., # of FMT instances over a period of time)
+						 	<ul>
+                         		<li class="li_dropdown">1 = yes</li>
+                         		<li class="li_dropdown">0 = no</li>
+                         	</ul>
+                         <li class="li_dropdown">FMTResponse: FMT measure response
+                         	<ul>
+                         		<li class="li_dropdown">if yes/no probe
+                         		<li class="li_dropdown">1 = yes</li>
+                         		<li class="li_dropdown">0 = no</li>
+                         	</ul>
+                         <li class="li_dropdown">DisengagementResponseType: type of response for difficulty disengaging
+                         	<ul>
+                         		<li class="li_dropdown">1 = Probe</li>
+                         		<li class="li_dropdown">2 = Self-Report</li>
+                         		<li class="li_dropdown">3 = Questionnaire</li>
+                         	</ul>
+                         <li class="li_dropdown">DisengagementProbeType: if difficulty disengaging response was a probe, type of probe used
+                         	<ul>
+                         		<li class="li_dropdown">1 = yes/no</li>
+                         		<li class="li_dropdown">2 = scale</li>
+                         	</ul>
+                         <li class="li_dropdown">DisengagementDirection: if a scale or questionnaire was used, what was the directionality?
+                         	<ul>
+                         		<li class="li_dropdown">1 = increasing (higher = more)</li>
+                         		<li class="li_dropdown">2 = decreasing (higher = less)</li>
+                         	</ul>
+                         <li class="li_dropdown">DisengagementScaleMin: minimum value of scale or questionnaire
+                         <li class="li_dropdown">DisengagementScaleMax: maximum value of scale or questionnaire
+                         <li class="li_dropdown">DisengagementAggregated: is the reported value an aggregate measure (e.g., # of difficulty disengaging instances over a period of time
+                         	<ul>
+                         		<li class="li_dropdown">1 = yes</li>
+                         		<li class="li_dropdown">0 = no</li>
+                         	</ul>
+                         <li class="li_dropdown">DisengagementResponse: difficulty disengaging measure response
+                         	<ul>
+                         		<li class="li_dropdown">if yes/no probe
+                         		<li class="li_dropdown">1 = yes</li>
+                         		<li class="li_dropdown">0 = no</li>
+                         	</ul>
+                         <li class="li_dropdown">ValenceResponseType: type of response for valence
+                         	<ul>
+                         		<li class="li_dropdown">1 = Probe</li>
+                         		<li class="li_dropdown">2 = Self-Report</li>
+                         		<li class="li_dropdown">3 = Questionnaire</li>
+                         	</ul>
+                         <li class="li_dropdown">ValenceProbeType: if valence response was a probe, type of probe used
+                         	<ul>
+                         		<li class="li_dropdown">1 = yes/no</li>
+                         		<li class="li_dropdown">2 = scale</li>
+                         	</ul>
+                         <li class="li_dropdown">ValenceDirection: if a scale or questionnaire was used, what was the directionality?
+                         	<ul>
+                         		<li class="li_dropdown">1 = increasing (higher = more)</li>
+                         		<li class="li_dropdown">2 = decreasing (higher = less)</li>
+                         	</ul>
+                         <li class="li_dropdown">ValenceScaleMin: minimum value of scale or questionnaire
+                         <li class="li_dropdown">ValenceScaleMax: maximum value of scale or questionnaire
+                         <li class="li_dropdown">ValenceAggregated: is the reported value an aggregate measure (e.g., # of valenced instances over a period of time)
+                         	<ul>
+                         		<li class="li_dropdown">1 = yes</li>
+                         		<li class="li_dropdown">0 = no</li>
+                         	</ul>
+                         <li class="li_dropdown">ValenceResponse: valence measure response
+                         	<ul>
+                         		<li class="li_dropdown">if yes/no probe
+                         		<li class="li_dropdown">1 = yes</li>
+                         		<li class="li_dropdown">0 = no</li>
+                         	</ul>
+                         <li class="li_dropdown">ArousalResponseType: type of response for arousal
+                         	<ul>
+                         		<li class="li_dropdown">1 = Probe</li>
+                         		<li class="li_dropdown">2 = Self-Report</li>
+                         		<li class="li_dropdown">3 = Questionnaire</li>
+                         	</ul>
+                         <li class="li_dropdown">ArousalProbeType: if arousal response was a probe, type of probe used
+                         	<ul>
+                         		<li class="li_dropdown">1 = yes/no</li>
+                         		<li class="li_dropdown">2 = scale</li>
+                         	</ul>
+                         <li class="li_dropdown">ArousalDirection: if a scale or questionnaire was used, what was the directionality?
+                         	<ul>
+                         		<li class="li_dropdown">1 = increasing (higher = more)</li>
+                         		<li class="li_dropdown">2 = decreasing (higher = less)</li>
+                         	</ul>
+                         <li class="li_dropdown">ArousalScaleMin: minimum value of scale or questionnaire
+                         <li class="li_dropdown">rousalScaleMax: maximum value of scale or questionnaire
+						<li class="li_dropdown">ArousalAggregated: is the reported value an aggregate measure (e.g., # of arousal instances over a period of time)
+							<ul>
+                         		<li class="li_dropdown">1 = yes</li>
+                         		<li class="li_dropdown">0 = no</li>
+                         	</ul>
+                         <li class="li_dropdown">ArousalResponse: arousal measure response
+                         	<ul>
+                         		<li class="li_dropdown">if yes/no probe
+                         		<li class="li_dropdown">1 = yes</li>
+                         		<li class="li_dropdown">0 = no</li>
+                         	</ul>
+                         <li class="li_dropdown">BoredomResponseType: type of response for boredom
+                         	<ul>
+                         		<li class="li_dropdown">1 = Probe</li>
+                         		<li class="li_dropdown">2 = Self-Report</li>
+                         		<li class="li_dropdown">3 = Questionnaire</li>
+                         	</ul>
+                         <li class="li_dropdown">BoredomProbeType: if boredom response was a probe, type of probe used
+                         	<ul>
+                         		<li class="li_dropdown">1 = yes/no</li>
+                         		<li class="li_dropdown">2 = scale</li>
+                         	</ul>
+                         <li class="li_dropdown">BoredomDirection: if a scale or questionnaire was used, what was the directionality?
+                         	<ul>
+                         		<li class="li_dropdown">1 = increasing (higher = more)</li>
+                         		<li class="li_dropdown">2 = decreasing (higher = less)</li>
+                         	</ul>
+                         <li class="li_dropdown">BoredomScaleMin: minimum value of scale or questionnaire
+                         <li class="li_dropdown">BoredomScaleMax: maximum value of scale or questionnaire
+                         <li class="li_dropdown">BoredomAggregated: is the reported value an aggregate measure (e.g., # of boredom instances over a period of time)
+                         	<ul>
+                         		<li class="li_dropdown">1 = yes</li>
+                         		<li class="li_dropdown">0 = no</li>
+                         	</ul>
+                         <li class="li_dropdown">BoredomResponse: boredom measure response
+                         	<ul>
+                         		<li class="li_dropdown">if yes/no probe
+                         		<li class="li_dropdown">1 = yes</li>
+                         		<li class="li_dropdown">0 = no</li>
+                         	</ul>
+                        </li>
+                    </ul>
+                </div>
+                <button class="accordion">Gaze measures</button>
+                <div class="panel">
+                  <ul>
+                        <li class="li_dropdown">TaskType: category of task
+                        <li class="li_dropdown">Fixations: number of fixations
+						<li class="li_dropdown">FixationTime: time spent fixating
+						<li class="li_dropdown">UniqueGazes: number of unique gazes
+						<li class="li_dropdown">UniqueGazeProportion: proportion of unique gazes
+						<li class="li_dropdown">UniqueFixations: number of unique fixations
+						<li class="li_dropdown">UniqueFixProportion: proportion of unique fixations
+						<li class="li_dropdown">OffscreenGazes: number of offscreen gazes
+						<li class="li_dropdown">OffScreenGazeProportion: proportion of offscreen gazes
+						<li class="li_dropdown">OffScreenGazeTime: time spent looking offscreen
+						<li class="li_dropdown">OffScreenFixations: number of offscreen fixations
+						<li class="li_dropdown">OffScreenFixProportion: proportion of offscreen fixations
+						<li class="li_dropdown">OffScreenFixTime: time spent fixating offscreen
+						<li class="li_dropdown">AOIGazes: number of gazes in area of interest
+						<li class="li_dropdown">AOIGazeProportion: proportion of gazes in area of interest
+						<li class="li_dropdown">AOIGazeTime: time spent in area of interest
+						<li class="li_dropdown">AOIFixations: number of fixations in area of interest
+						<li class="li_dropdown">AOIFixationProportion: proportion of fixations in area of interest
+						<li class="li_dropdown">AOIFixationTime: time spent fixating in area of interest
+                        </li>
+                        <li class="li_dropdown">TaskPerformance: if mappable, performance on the task during which the probe occurred (e.g., question about a probed screen)
+                        </li>
+                    </ul>
+                </div>
+                <button class="accordion">Demographic</button>
+                <div class="panel">
+                  <ul>
+                        <li class="li_dropdown">Age
+                        <li class="li_dropdown">Gender
+                            <ul>
+                                <li class="li_dropdown">1 = male</li>
+                                <li class="li_dropdown">2 = female</li>
+                                <li> class="li_dropdown"3 = nonbinary/other</li>
+                            </ul>
+                        <li class="li_dropdown">White/Caucasian
+                        	<ul>
+                         		<li class="li_dropdown">1 = yes</li>
+                         	</ul>
+                        <li class="li_dropdown">White/Caucasian
+                        	<ul>
+                         	<li class="li_dropdown">1 = yes</li>	
+                         	</ul>
+                        <li class="li_dropdown">Hispanic/Latino
+                        	<ul>
+                         	<li class="li_dropdown">1 = yes</li>	
+                         	</ul>
+                         <li class="li_dropdown">Black/African American
+                         	<ul>
+                         	<li class="li_dropdown">1 = yes</li>	
+                         	</ul>
+                         <li class="li_dropdown">Alaskan/Native American
+                         <ul>
+                         	<li class="li_dropdown">1 = yes</li>	
+                         	</ul>
+                         <li class="li_dropdown">Asian/Pacific Islander
+                         	<ul>
+                         	<li class="li_dropdown">1 = yes</li>	
+                         	</ul>
+                         <li class="li_dropdown">Native Hawaiian/Pacific Islander
+                         	<ul>
+                         	<li class="li_dropdown">1 = yes</li>	
+                         	</ul>
+                         <li class="li_dropdown">East Asian
+                         	<ul>
+                         	<li class="li_dropdown">1 = yes</li>	
+                         	</ul>
+                         <li class="li_dropdown">Southeast Asian
+                         	<ul>
+                         	<li class="li_dropdown">1 = yes</li>	
+                         	</ul>
+                         <li class="li_dropdown">South Asian
+                         	<ul>
+                         	<li class="li_dropdown">1 = yes</li>	
+                         	</ul>
+                         <li class="li_dropdown">Middle Easter/North African
+                         	<ul>
+                         	<li class="li_dropdown">1 = yes</li>	
+                         	</ul>
+                         <li class="li_dropdown">Lighting: What is the current lighting situation in the room?
+                         	<ul>
+                         	<li class="li_dropdown">1 = well lit</li>	
+                         	<li class="li_dropdown">1 = dim lit</li>
+                         	<li class="li_dropdown">1 = no lighting</li>
+                         	</ul>
+                         <li class="li_dropdown">Glasses: Are you wearing glasses?
+                         	<ul>
+                         	<li class="li_dropdown">1 = yes</li>	
+                         	<li class="li_dropdown">2 = no</li>
+                         	</ul>
+                         <li class="li_dropdown"> Medication: Are you currently on medication?
+                         	<ul>
+                         	<li class="li_dropdown">1 = yes</li>	
+                         	<li class="li_dropdown">2 = no</li>
+                         	</ul>
+                         <li class="li_dropdown">Neurodivergent: Have you been diagnosed as neurodivergent?
+                         	<ul>
+                         	<li class="li_dropdown">1 = yes</li>	
+                         	<li class="li_dropdown">2 = no</li>
+                         	</ul>
+                         <li class="li_dropdown">Clinical: Are you part of a clinical population
+                         	<ul>
+                         	<li class="li_dropdown">1 = clinical</li>	
+                         	<li class="li_dropdown">2 = subclinical</li>
+                         	</ul>
+                         <li class="li_dropdown">Alone: Are you currently alone in the room?
+                         	<ul>
+                         	<li class="li_dropdown">1 = yes</li>	
+                         	<li class="li_dropdown">2 = no</li>
+                         	</ul>
+
+                        </li>
+                    </ul>
+                </div>
+
+
+
+            </div>
+            <!-- /. PAGE INNER  -->
+        </div>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+    <!-- jQuery Js -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <!-- Bootstrap Js -->
+    <script src="assets/js/bootstrap.min.js"></script>
+	 
+    <!-- Metis Menu Js -->
+    <script src="assets/js/jquery.metisMenu.js"></script>
+    <!-- Morris Chart Js -->
+    <script src="assets/js/morris/raphael-2.1.0.min.js"></script>
+    <script src="assets/js/morris/morris.js"></script>
+	
+	
+	<script src="assets/js/easypiechart.js"></script>
+	<script src="assets/js/easypiechart-data.js"></script>
+	
+	
+    <!-- Custom Js -->
+    <script src="assets/js/custom-scripts.js"></script>
+    <script type="text/javascript">
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            /* Toggle between adding and removing the "active" class,
+            to highlight the button that controls the panel */
+            this.classList.toggle("active");
+
+            /* Toggle between hiding and showing the active panel */
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+              panel.style.display = "none";
+            } else {
+              panel.style.display = "block";
+            }
+          });
+        }
+    </script>
+
+</body>
+
+</html>
